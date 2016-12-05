@@ -1,0 +1,17 @@
+.DS_Store
+.idea/
+.gradle/
+bin/
+gen/
+build/
+captures/
+reports/
+*.iml
+README.md
+local.properties
+app/gradle.properties
+app/version.properties
+!**/src/**/build/
+!**/ReactAndroid/build/
+**/ReactAndroid/build/*
+!**/ReactAndroid/build/downloads/
