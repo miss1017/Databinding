@@ -1,0 +1,14 @@
+.idea/*
+bin/
+gen/
+.gradle
+local.properties
+build/
+captures/
+.DS_Store
+**/*.iml
+app/gradle.properties
+app/version.properties
+app/test/debug/*
+app/src/main/assets/styles/
+/build
