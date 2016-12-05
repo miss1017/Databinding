@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.fs.databinding.MainActivity">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.fs.databinding.model.User" />
+
+        <variable
+            name="handler"
+            type="com.example.fs.databinding.handler.ClickHandler" />
+
+        <import type="android.databinding.ObservableMap" />
+    </data>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tv2" />
+</layout>

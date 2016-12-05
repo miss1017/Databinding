@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.fs.databinding.MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data class=".MainDatabinding">
+    <data class=".ViewstubDatabinding">
         <variable
             name="user"
             type="com.example.fs.databinding.model.User" />
         <variable
             name="handler"
-            type="com.example.fs.databinding.handler.ClickHandler" />
+            type="com.example.fs.databinding.ViewStubActivity.ClickHandler" />
         <import type="android.databinding.ObservableMap"/>
     </data>
 
@@ -21,25 +19,25 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical">
-
         <TextView
+            android:id="@+id/text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.name}" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{handler::onClick}"
-            android:text="btn1"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{() -> handler.onClick()}"
-            android:text="@string/app_name"/>
+            android:text="@{user.name}"/>
         <ViewStub
             android:id="@+id/view_stub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout="@layout/activity_main"/>
+            android:layout="@layout/include_view_stub"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show viewstubs tv"
+            android:onClick="@{() -> handler.onClick()}"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change user name"
+            android:onClick="@{() -> handler.onChangeName()}"/>
     </LinearLayout>
 </layout>
