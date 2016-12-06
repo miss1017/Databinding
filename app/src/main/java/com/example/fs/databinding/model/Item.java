@@ -1,21 +1,21 @@
 package com.example.fs.databinding.model;
 
 import android.databinding.BaseObservable;
-import android.databinding.Bindable;
+import android.databinding.ObservableField;
 import android.support.annotation.ColorInt;
-import com.example.fs.databinding.BR;
 
 /**
  * Created by 086 on 2016/12/5.
  */
 
-public class Item extends BaseObservable{
-    private String name;
+public class Item extends BaseObservable {
     @ColorInt
     private int color;
     private int paddingLeft;
+    public ObservableField<String> name = new ObservableField();
+
     public Item(String name, @ColorInt int color, int paddingLeft) {
-        this.name = name;
+        this.name.set(name);
         this.color = color;
         this.paddingLeft = paddingLeft;
     }
@@ -23,15 +23,13 @@ public class Item extends BaseObservable{
     public Item() {
     }
 
-    @Bindable
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-        notifyPropertyChanged(BR.name);
-    }
+//    public String getName() {
+//        return (String) name.get();
+//    }
+//
+//    public void setName(String name) {
+//        this.name.set(name);
+//    }
 
     public int getColor() {
         return color;

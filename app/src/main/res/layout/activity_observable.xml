@@ -8,17 +8,31 @@
         <variable
             name="user"
             type="com.example.fs.databinding.model.User" />
+        <variable
+            name="item"
+            type="com.example.fs.databinding.model.Item" />
 
         <variable
             name="handler"
             type="com.example.fs.databinding.ObservableActivity.ClickHandler" />
     </data>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="@{user.name}"
+        android:text="@{item.name}"
         android:onClick="@{()->handler.onClick()}"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@{user.name}"
+        android:onClick="@{(v)->handler.onClick(v)}"/>
+    </LinearLayout>
 </layout>

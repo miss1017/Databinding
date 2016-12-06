@@ -10,7 +10,7 @@
         <variable
             name="handler"
             type="com.example.fs.databinding.handler.ClickHandler" />
-        <import type="android.databinding.ObservableMap"/>
+        <import type="android.view.View"/>
     </data>
 
     <LinearLayout
@@ -30,7 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{handler::onClick}"
-            android:text="btn1"/>
+            android:text="btn1"
+            android:visibility="@{View.INVISIBLE}"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
